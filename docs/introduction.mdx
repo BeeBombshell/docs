@@ -6,6 +6,7 @@ slug: /
 
 import Video from "../src/components/Video";
 import videoUrl from "/static/img/intro.mp4";
+import CusdisComments from '../src/components/CusdisComments';
 
 An open source low-code platform for building your product backend
 
@@ -54,15 +55,11 @@ You can also email us at [hello@rowy.io](mailto:hello@rowy.io)
 
 #### Comments
 
-<head>
-  <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-</head>
-
-<div id="cusdis"
-  data-host="https://cusdis.com"
-  data-app-id="49da488c-98c0-4284-943e-fc2be8b8504b"
-  data-page-id= {frontMatter.id}
-  data-page-url= {frontMatter.slug}
-  data-page-title= {frontMatter.title}
-  data-theme="auto"
-></div>
+<CusdisComments
+  id="cusdis_thread"
+  attrs={{
+    pageId: frontMatter.id,
+    pageTitle: frontMatter.title,
+    pageUrl: frontMatter.__resourcePath,
+  }} 
+/>
