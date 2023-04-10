@@ -44,6 +44,15 @@ const darkCodeTheme = require("prism-react-renderer/themes/okaidia");
       ],
     ],
 
+    plugins: [
+      [
+        "docusaurus2-dotenv",
+        {
+          systemvars: true,
+        },
+      ],
+    ],
+
     stylesheets: [
       "https://rsms.me/inter/inter.css",
       "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap",
